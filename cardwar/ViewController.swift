@@ -15,6 +15,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func deckButtonTouchUpInside(_ sender: Any) {
+    }
+    @IBOutlet weak var deckButton: UIButton!
+    @IBAction func player1ScoreLabel(_ sender: Any) {
+    }
+    
+    @IBAction func player2ScoreLabel(_ sender: Any) {
+    }
+    @IBAction func restartButtonTouchUpInside(_ sender: Any) {
+    }
 }
 

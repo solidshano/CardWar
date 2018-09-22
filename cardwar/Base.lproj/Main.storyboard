@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,111 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cardwar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Felt" translatesAutoresizingMaskIntoConstraints="NO" id="Bba-RN-qwN">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uq-vx-jzH">
+                                <rect key="frame" x="14" y="20" width="40" height="40"/>
+                                <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="restartButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jb-aR-RkR"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-bR-foM">
+                                <rect key="frame" x="20" y="94" width="106.5" height="187.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Deck" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBs-Mx-8DX">
+                                        <rect key="frame" x="23.5" y="0.0" width="59" height="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL9-qx-aWe">
+                                        <rect key="frame" x="0.0" y="52" width="106.5" height="135.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pL9-qx-aWe" secondAttribute="height" multiplier="383:488" id="hEl-TA-9TF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Card-Back"/>
+                                        <connections>
+                                            <action selector="deckButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltl-aG-wx0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eiu-wj-6Ez">
+                                <rect key="frame" x="59" y="20" width="131" height="19"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 1 Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ZP-iy-RB0">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fha-bl-jDP">
+                                        <rect key="frame" x="118" y="0.0" width="13" height="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="player1ScoreLabel:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="22i-yO-rnM"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="mQf-JT-ogK">
+                                <rect key="frame" x="20" y="336" width="137" height="19"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player 2 Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCD-JB-pm1">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyj-tm-yf0">
+                                        <rect key="frame" x="124" y="0.0" width="13" height="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="player2ScoreLabel:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="jh9-NP-C0g"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bba-RN-qwN" secondAttribute="trailing" id="6W0-gv-rxp"/>
+                            <constraint firstItem="Bba-RN-qwN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Sj-I4-Lwx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mQf-JT-ogK" secondAttribute="bottom" constant="20" id="B1L-Pl-OYe"/>
+                            <constraint firstItem="Bba-RN-qwN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qhc-yn-Qoa"/>
+                            <constraint firstItem="mQf-JT-ogK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vg1-6p-tZH"/>
+                            <constraint firstItem="b5G-bR-foM" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XBF-gW-t2F"/>
+                            <constraint firstItem="eiu-wj-6Ez" firstAttribute="leading" secondItem="8Uq-vx-jzH" secondAttribute="trailing" constant="20" id="ghc-pw-W9C"/>
+                            <constraint firstItem="b5G-bR-foM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jrO-wl-R56"/>
+                            <constraint firstItem="b5G-bR-foM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="kzC-TX-rCF"/>
+                            <constraint firstItem="eiu-wj-6Ez" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xjT-8R-4rh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bba-RN-qwN" secondAttribute="bottom" id="zwt-Bu-x5z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="deckButton" destination="pL9-qx-aWe" id="9r6-Yy-F5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.23538230884558" y="48.799999999999997"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Card-Back" width="329" height="488"/>
+        <image name="Felt" width="1000" height="1000"/>
+        <image name="restart" width="512" height="512"/>
+    </resources>
 </document>
